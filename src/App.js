@@ -16,7 +16,7 @@ function App() {
   const [newAge, setNewAge] = useState(0);
 
   const [users, setUsers] = useState([]);
-  const usersCollectionRef = collection(db, "users");
+  const usersCollectionRef = collection(db, "TempData");
 
   const createUser = async () => {
     await addDoc(usersCollectionRef, { name: newName, age: Number(newAge) });
